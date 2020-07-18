@@ -1,12 +1,19 @@
-"use strict";
+const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?","");
 
-console.log('arr' + " - object");
-console.log(4 + +"5");
+const personalMoveDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-let incr = 10,
-    decr = 10;
+const lastFilm1 = prompt("Один из последних просмотренных фильмов?",""),
+      rateTheFilm1 = prompt("Оцените его:",""),
+      lastFilm2 = prompt("Один из последних просмотренных фильмов?",""),
+      rateTheFilm2 = prompt("Оцените его:","");
 
-console.log(++incr);    
-console.log(--decr);
+personalMoveDB.movies[lastFilm1] = rateTheFilm1;
+personalMoveDB.movies[lastFilm2] = rateTheFilm2;
 
-console.log(2 * 3 === '6');
+console.log(personalMoveDB);
